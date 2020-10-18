@@ -5,16 +5,9 @@ const app = express()
 
 const publicDirPath = path.join(__dirname, '../public') //manipulate the path
 
-
 app.use(express.static(publicDirPath))
 
-
-
-
-
-
-
-app.get('/weather', (req,res) => {
+app.get('/weather', (req, res) => {
   res.send({
     forcast: 'cloudy',
     location: 'Sweden'
